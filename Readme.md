@@ -16,4 +16,4 @@ Sometimes the localhots does not work correctly and it becomes necessary to know
 
 * `netstat -an | find "27017"`
 
-con esto podras saber en que puerto escucha el pc por lo general son 2 puesrtod de escucha y deberas tomar la direccion TCP que combina el puerto en esta caso 127.0.0.1:27017
+With this you will be able to know on which port the pc listens, usually there are 2 listening ports and you will have to take the TCP address that combines the port in this case 127.0.0.1:27017.
