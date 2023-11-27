@@ -1,6 +1,6 @@
 import mongoose from 'moongose';
 
-mongoose.schema({
+const appointmentSchema = mongoose.Schema({
     //model for appointment
     name: {
         type: String,
@@ -69,5 +69,5 @@ mongoose.schema({
     },
 });
 
-const Appointment = mongoose.model('Appointment', AppointmentSchema);
+const Appointment = mongoose.model('Appointment', appointmentSchema);
 export default Appointment;

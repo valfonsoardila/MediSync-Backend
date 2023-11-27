@@ -1,6 +1,6 @@
 import mongoose from 'moongose';
 
-mongoose.schema({
+const patientSchema = mongoose.Schema({
     //model for patient
     name: {
         type: String,
@@ -34,3 +34,6 @@ mongoose.schema({
         trim: true,
     },
 });
+
+const Patient = mongoose.model('Patient', patientSchema);
+export default Patient;

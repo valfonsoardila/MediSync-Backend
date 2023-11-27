@@ -73,5 +73,4 @@ const clinicalHistorySchema = mongoose.Schema({
 });
 
 const ClinicalHistory = mongoose.model('ClinicalHistory', clinicalHistorySchema);
-
 export default ClinicalHistory;

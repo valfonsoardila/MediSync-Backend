@@ -1,6 +1,6 @@
 import mongoose from 'moongose';
 
-mongoose.schema({
+const diseasesSchema = mongoose.Schema({
     code: {
         type: String,
         required: true,
@@ -41,5 +41,5 @@ mongoose.schema({
     },
 });
 
-const Diseases = mongoose.model('Diseases', DiseasesSchema);
+const Diseases = mongoose.model('Diseases', diseasesSchema);
 export default Diseases;
