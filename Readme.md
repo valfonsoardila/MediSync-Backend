@@ -29,4 +29,6 @@ netstat -an | find "27017"
 
 With this you will be able to know on which port the pc listens, usually there are 2 listening ports and you will have to take the TCP address that combines the port in this case 127.0.0.1:27017.
 
+### `Command to know on which port you are listening`
 
+To test the routes it is necessary to install an extension from the VS Code extensions called `Thunder Client` install it and start making Post and Gets for the respective routes.
