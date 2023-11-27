@@ -1,4 +1,4 @@
-## important commands
+# Important Commands
 
 ### `command to run the server`
 
