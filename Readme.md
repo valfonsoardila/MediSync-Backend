@@ -6,7 +6,7 @@ execute the "mongod" command from any cmd console:
 
 * `mongod`
 
-`Nota:` en caso de que te de un error  o la consola cierre inesperadamente la ejecucion del servidor es porque no tienes creada la ruta donde se guaradaran los archivos de ejecucion para ello antes debes crear la ruta en tu unidad principal C con este comando:
+`Note:` In case you get an error or the console unexpectedly closes the server execution it is because you have not created the path where the execution files will be saved for it before you must create the path in your main drive C with this command:
 
 * `mkdir C:\data\db`
 
