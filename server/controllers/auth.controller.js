@@ -12,8 +12,8 @@ export const signup = async (req, res) => {
 };
 
 export const signin = async (req, res) => {
+  const { email, password } = req.body;
   console.log("Signin route called");
-  res.send("signin route");
 };
 
 export const logout = async (req, res) => {

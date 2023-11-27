@@ -1,3 +1,13 @@
+# Description Project
+
+This project is made with Node js and Mongo Db initially for this project and documentation the project will be with a local database for it you must install mongodb community server from the official site: 
+
+https://www.mongodb.com/try/download/community
+
+you must download and install it sequentially through the installer setup then create the database connection and create the database with their respective collections from the MongoDB Compass application.
+
+At the end this project was migrated to a database in the cloud in this case it is optional if you want to leave it local you can work it without any inconvenience.
+
 # Important Extensions
 As a recommendation you can install an extension from the VS Code extensions to manage the `mongo db` database from your own workspace the extension can be obtained like this: 
 
