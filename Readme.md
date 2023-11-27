@@ -1,3 +1,8 @@
+# Important Extensions
+As a recommendation you can install an extension from the VS Code extensions to manage the `mongo db` database from your own workspace the extension can be obtained like this: 
+
+* `MongoDB for VS Code`
+
 # Important Commands
 
 ### `command to run the server`
