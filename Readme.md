@@ -6,6 +6,10 @@ execute the "mongod" command from any cmd console:
 
 * `mongod`
 
+```bash
+mongod
+```
+
 `Note:` In case you get an error or the console unexpectedly closes the server execution it is because you have not created the path where the execution files will be saved for it before you must create the path in your main drive C with this command:
 
 * `mkdir C:\data\db`
