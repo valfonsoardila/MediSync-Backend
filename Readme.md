@@ -19,7 +19,7 @@ mkdir C:\data\db
 ```
 ### `Command to know on which port you are listening`
 
-Sometimes the localhots does not work correctly and it becomes necessary to know on which port or on which ip address the PC is running the API to give addresses or routes to the important parts in your application so from the cmd you can use this command:
+Sometimes the localhots does not work correctly and it becomes necessary to know on which port or on which IP address the PC is running the API to give addresses or routes to the important parts in your application so from the cmd you can use this command:
 
 * `netstat -an | find "27017"`
 
