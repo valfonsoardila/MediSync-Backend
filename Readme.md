@@ -14,13 +14,11 @@ execute the "mongod" command from any cmd console:
 
 Sometimes the localhots does not work correctly and it becomes necessary to know on which port or on which ip address the PC is running the API to give addresses or routes to the important parts in your application so from the cmd you can use this command:
 
+
 * `netstat -an | find "27017"`
+
+```bash
+netstat -an | find "27017"
 
 With this you will be able to know on which port the pc listens, usually there are 2 listening ports and you will have to take the TCP address that combines the port in this case 127.0.0.1:27017.
 
-# Tu sección o título
-
-Para realizar alguna acción, puedes utilizar el siguiente comando:
-
-```bash
-tu_comando_aqui
