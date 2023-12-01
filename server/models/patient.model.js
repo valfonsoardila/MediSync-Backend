@@ -33,7 +33,7 @@ const patientSchema = mongoose.Schema({
         required: true,
         trim: true,
     },
-});
+},{ timestamps: true });
 
 const Patient = mongoose.model('Patient', patientSchema);
 export default Patient;

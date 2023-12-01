@@ -39,7 +39,7 @@ const diseasesSchema = mongoose.Schema({
         type: String,
         trim: true,
     },
-});
+}, { timestamps: true });
 
 const Diseases = mongoose.model('Diseases', diseasesSchema);
 export default Diseases;

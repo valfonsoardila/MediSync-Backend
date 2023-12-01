@@ -6,7 +6,7 @@ const specialtySchema = mongoose.Schema({
         required: true,
         trim: true,
     },
-    name: {
+    specialties: {
         type: String,
         required: true,
         trim: true,
@@ -15,7 +15,7 @@ const specialtySchema = mongoose.Schema({
         type: String,
         trim: true,
     }],
-});
+}, { timestamps: true });
 
 const Specialty = mongoose.model('Specialty', specialtySchema);
 export default Specialty;

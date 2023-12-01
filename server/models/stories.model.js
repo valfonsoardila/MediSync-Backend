@@ -70,7 +70,7 @@ const clinicalHistorySchema = mongoose.Schema({
     followUpDate: {
         type: Date,
     },
-});
+},{ timestamps: true });
 
 const ClinicalHistory = mongoose.model('ClinicalHistory', clinicalHistorySchema);
 export default ClinicalHistory;
