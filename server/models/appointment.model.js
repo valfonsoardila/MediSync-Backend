@@ -33,6 +33,11 @@ const appointmentSchema = mongoose.Schema({
         required: true,
         trim: true,
     },
+    doctor: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     nameCompanion: {
         type: String,
         required: true,
