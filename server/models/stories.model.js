@@ -70,6 +70,10 @@ const clinicalHistorySchema = mongoose.Schema({
     followUpDate: {
         type: Date,
     },
+    remarks: {
+        type: String,
+        trim: true,
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
