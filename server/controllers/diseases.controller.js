@@ -13,6 +13,7 @@ export const createDisease = async (req, res) => {
 };
 export const getDiseases = async (req, res) => {
   try {
+    console.log("getDiseases");
     const diseases = await Diseases.find();
     res.status(200).json(diseases);
   } catch (error) {

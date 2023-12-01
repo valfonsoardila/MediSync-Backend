@@ -1,4 +1,4 @@
-import mongoose from 'moongose';
+import mongoose from 'mongoose';
 
 const patientSchema = mongoose.Schema({
     //model for patient
