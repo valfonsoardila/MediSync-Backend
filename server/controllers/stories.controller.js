@@ -1,4 +1,4 @@
-import ClinicalHistory from '../models/stories.model';
+import ClinicalHistory from '../models/stories.model.js';
 
 // Create and Save a new ClinicalHistory
 export const createClinicalHistory = async (req, res) => {

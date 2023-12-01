@@ -1,4 +1,4 @@
-import Patient from "../models/patient.model";
+import Patient from "../models/patient.model.js";
 
 // Create and Save a new Patient
 export const createPatient = async (req, res) => {
