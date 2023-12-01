@@ -11,10 +11,18 @@ const specialtySchema = mongoose.Schema({
         required: true,
         trim: true,
     },
-    subspecialties: [{
+    subspecialties_1: {
         type: String,
         trim: true,
-    }],
+    },
+    subspecialties_2: {
+        type: String,
+        trim: true,
+    },
+    subspecialties_3: {
+        type: String,
+        trim: true,
+    },
 }, { timestamps: true });
 
 const Specialty = mongoose.model('Specialty', specialtySchema);
