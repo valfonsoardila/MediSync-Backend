@@ -3,7 +3,10 @@ import Doctor from "../models/doctor.model.js";
 // Create and Save a new Doctor
 export const createDoctor = async (req, res) => {
   try {
-    const newDoctor = new Doctor(req.body);
+    const newDoctor = new Doctor({
+      ...req.body,
+      userId: req.userId,
+    });
     await newDoctor.save();
     res.status(201).json(newDoctor);
   } catch (error) {

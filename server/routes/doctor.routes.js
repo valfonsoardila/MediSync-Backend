@@ -6,14 +6,15 @@ import {
     updateDoctorById,
     deleteDoctorById
 } from "../controllers/doctor.controller.js";
+import { authRequired } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
 // /api/doctors
-router.post("/doctors", createDoctor);
-router.get("/doctors", getDoctors);
-router.get("/doctors/:id", getDoctorById);
-router.put("/doctors/:id", updateDoctorById);
-router.delete("/doctors/:id", deleteDoctorById);
+router.post("/doctors", authRequired, createDoctor);
+router.get("/doctors", authRequired, getDoctors);
+router.get("/doctors/:id", authRequired, getDoctorById);
+router.put("/doctors/:id", authRequired, updateDoctorById);
+router.delete("/doctors/:id", authRequired, deleteDoctorById);
 
 export default router;

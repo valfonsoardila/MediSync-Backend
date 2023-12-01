@@ -3,7 +3,10 @@ import ClinicalHistory from '../models/stories.model.js';
 // Create and Save a new ClinicalHistory
 export const createClinicalHistory = async (req, res) => {
     try {
-        const newClinicalHistory = new ClinicalHistory(req.body);
+        const newClinicalHistory = new ClinicalHistory({
+            ...req.body,
+            userId: req.userId,
+        });
         await newClinicalHistory.save();
         res.status(201).json(newClinicalHistory);
     } catch (error) {
