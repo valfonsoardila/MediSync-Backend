@@ -1,4 +1,5 @@
 import { Router } from "express";
+
 import {
     createSpecialty,
     getSpecialties,
@@ -9,7 +10,7 @@ import {
 
 const router = Router();
 
-// /api/specialties
+//api/specialties
 router.post("/specialties", createSpecialty);
 router.get("/specialties", getSpecialties);
 router.get("/specialties/:id", getSpecialtyById);

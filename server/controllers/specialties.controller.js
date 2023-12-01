@@ -1,4 +1,4 @@
-import Specialty from '../models/specialty.model';
+import Specialty from "../models/specialties.model.js";
 
 // Create and Save a new Specialty
 export const createSpecialty = async (req, res) => {
