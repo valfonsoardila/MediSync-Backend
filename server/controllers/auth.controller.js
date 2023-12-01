@@ -1,6 +1,6 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
-import { createToken } from "../libs/jwt.js";
+import { createToken, createResetToken } from "../libs/jwt.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -70,6 +70,26 @@ export const signin = async (req, res) => {
     res.status(500).json({ error: "Internal error, please try again" });
   }
 };
+
+export const resetPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+    // Verificar si el usuario existe
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    // Generar un token para resetear la contraseña
+    const resetToken = await createResetToken({ id: user._id, });
+    res.clearCookie("token");
+    res.cookie("token", resetToken);
+    res.json({ message: "Reset password email sent successfully" });
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "Internal error, please try again" });
+  }
+};
+  
 export const logout = async (req, res) => {
   try {
     res.clearCookie("token");

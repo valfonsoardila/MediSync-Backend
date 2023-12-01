@@ -8,8 +8,15 @@ import storiesRouter from "./routes/stories.routes.js";
 import doctorRouter from "./routes/doctor.routes.js";
 import patientRouter from "./routes/patient.routes.js";
 import cookieParser from "cookie-parser";
+import cors from "cors";
 
 const app = express();
+
+app.use(cors(
+    {
+        origin: "http://localhost:3000",
+    }
+));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());

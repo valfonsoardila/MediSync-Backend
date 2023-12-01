@@ -2,6 +2,7 @@ import { Router } from "express";
 import {
   signup,
   signin,
+  resetPassword,
   logout,
   profile,
 } from "../controllers/auth.controller.js";
@@ -13,6 +14,8 @@ const router = Router();
 
 router.post("/signup", validateSchema(signupSchema), signup);
 router.post("/signin", validateSchema(signinSchema), signin);
+//reset password
+router.post("/reset-password", resetPassword);
 router.post("/logout", logout);
 // Route protected by authRequired middleware 
 router.get("/profile", authRequired, profile);
