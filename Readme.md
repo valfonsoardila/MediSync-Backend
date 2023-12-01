@@ -1,4 +1,4 @@
-# Description Project
+# 🚧 Description Project 🚧 
 
 This project is made with Node js and Mongo Db initially for this project and documentation the project will be with a local database for it you must install mongodb community server from the official site: 
 
@@ -8,12 +8,12 @@ you must download and install it sequentially through the installer setup then c
 
 At the end this project was migrated to a database in the cloud in this case it is optional if you want to leave it local you can work it without any inconvenience.
 
-# Important Extensions
+# Important Extensions 💣
 As a recommendation you can install an extension from the VS Code extensions to manage the `mongo db` database from your own workspace the extension can be obtained like this: 
 
 * `MongoDB for VS Code`
 
-# Important Commands
+# Important Commands 💻
 
 ### `command to run the server`
 
@@ -47,3 +47,4 @@ With this you will be able to know on which port the pc listens, usually there a
 ### `Command to know on which port you are listening`
 
 To test the routes it is necessary to install an extension from the VS Code extensions called `Thunder Client` install it and start making Post and Gets for the respective routes.
+
