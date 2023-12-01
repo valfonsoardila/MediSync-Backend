@@ -1,8 +1,13 @@
-import Apointment from '../models/appointment.model.js';
+import Appointment from '../models/appointment.model.js';
 
 export const createAppointment = async (req, res) => {
     try {
-        const newAppointment = new Apointment(req.body);
+        const userId = req.userId;
+        // Crea una nueva cita y asigna el ID del usuario
+        const newAppointment = new Appointment({
+            ...req.body,
+            user: userId,
+        });
         await newAppointment.save();
         res.status(201).json(newAppointment);
     } catch (error) {
@@ -13,7 +18,7 @@ export const createAppointment = async (req, res) => {
 
 export const getAppointments = async (req, res) => {
     try {
-        const appointments = await Apointment.find();
+        const appointments = await Appointment.find();
         res.status(200).json(appointments);
     } catch (error) {
         console.error(error);
@@ -23,7 +28,7 @@ export const getAppointments = async (req, res) => {
 
 export const getAppointmentById = async (req, res) => {
     try {
-        const appointment = await Apointment.findById(req.params.id);
+        const appointment = await Appointment.findById(req.params.id);
         if (!appointment) {
             return res.status(404).json({ error: "Appointment not found" });
         }
@@ -36,7 +41,7 @@ export const getAppointmentById = async (req, res) => {
 
 export const updateAppointmentById = async (req, res) => {
     try {
-        const appointment = await Apointment.findByIdAndUpdate(
+        const appointment = await Appointment.findByIdAndUpdate(
             req.params.id,
             req.body,
             { new: true }
@@ -53,7 +58,7 @@ export const updateAppointmentById = async (req, res) => {
 
 export const deleteAppointmentById = async (req, res) => {
     try {
-        const appointment = await Apointment.findByIdAndDelete(req.params.id);
+        const appointment = await Appointment.findByIdAndDelete(req.params.id);
         if (!appointment) {
             return res.status(404).json({ error: "Appointment not found" });
         }

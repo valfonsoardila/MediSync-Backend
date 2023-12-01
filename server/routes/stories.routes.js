@@ -13,7 +13,7 @@ const router = Router();
 // /api/stories
 router.post("/stories", authRequired, createClinicalHistory);
 router.get("/stories", authRequired, getClinicalHistorys);
-router.get("/stories/:id", authRequired, getClinicalHistoryById);
+router.get("/stories/:id", getClinicalHistoryById);
 router.put("/stories/:id", authRequired, updateClinicalHistoryById);
 router.delete("/stories/:id", authRequired, deleteClinicalHistoryById);
 

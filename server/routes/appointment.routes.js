@@ -10,9 +10,9 @@ import { authRequired } from "../middlewares/auth.middleware.js";
 
 const router = Router();
 
-router.post("/appointment", authRequired, createAppointment);
+router.post("/appointment", createAppointment);
 router.get("/appointment", authRequired, getAppointments);
-router.get("/appointment/:id", authRequired, getAppointmentById);
+router.get("/appointment/:id", getAppointmentById);
 router.put("/appointment/:id", authRequired, updateAppointmentById);
 router.delete("/appointment/:id", authRequired, deleteAppointmentById);
 
